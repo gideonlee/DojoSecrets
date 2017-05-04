@@ -1,0 +1,8 @@
+<form action='/s' method='post'>
+	<input type="hidden" name="authenticity_token" value='<%= form_authenticity_token %>'>
+	<p>Email: <input type="text" name="user[email]"></p>
+	<p>Password: <input type="text" name="user[password]"></p>
+	<p><input class='btn btn-default' type="submit" value="Log In"></p>
+</form>
+
+<a href="/u/new">Create an Account</a>

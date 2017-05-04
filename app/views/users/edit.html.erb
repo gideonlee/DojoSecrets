@@ -1,0 +1,14 @@
+<h1>Edit Profile</h1>
+
+<form action='/u/<%= current_user.id %>' method='post'>
+	<input type="hidden" name="authenticity_token" value='<%= form_authenticity_token %>'>
+	<input type="hidden" name="_method" value='patch'>
+	<p>Name: <input type="text" name="user[name]" value='<%= current_user.name %>'></p>
+	<p>Email: <input type="text" name="user[email]" value='<%= current_user.email %>'></p>
+	<p>Retype Password: <input type="text" name="user[password]"></p>
+	<p><input class='btn btn-default' type="submit" value="Update"></p>
+</form>
+
+<form action='/u/<%= current_user.id %>' method='get'>
+	<p><input class='btn btn-default' type="submit" value="Home"></p>
+</form>
