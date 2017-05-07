@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: DojoSecrets_production
-  username: DojoSecrets
+  # username: DojoSecrets
   password: <%= ENV['DOJOSECRETS_DATABASE_PASSWORD'] %>
