@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_action :check_if_user_in_session, only: [:show, :create, :update, :edit, :destroy,]
+	before_action :check_if_user_in_session, only: [:show, :update, :edit, :destroy]
 
 	def new
 
@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 	def show
 		redirect_to "/u/#{session[:user_id]}" unless request.env['PATH_INFO'] == "/u/#{session[:user_id]}"
 		@secrets_created = User.find(session[:user_id]).secrets
+		@secrets_liked = User.find(session[:user_id]).secrets_liked
 	end
 
 	def create

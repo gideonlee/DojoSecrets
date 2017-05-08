@@ -34,4 +34,10 @@
 </div>
 <div class='col-md-6'>
 	<h4>Secrets Liked</h4>
+	<% @secrets_liked.each do |s| %>
+		<div class='row'>
+			<p><%= s.content %></p>
+			<p><%= s.likes.count %> likes</p>
+		</div>
+	<% end %>
 </div>
